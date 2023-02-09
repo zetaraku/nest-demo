@@ -12,7 +12,7 @@ async function bootstrap() {
     .addTag('cats')
     .addSecurity('csrf', { type: 'apiKey', in: 'header', name: 'X-Csrf-Token' })
     .addSecurity('recaptcha', { type: 'apiKey', in: 'header', name: 'X-Recaptcha-Token' })
-    .addSecurityRequirements('csrf')
+    // .addSecurityRequirements('csrf')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
